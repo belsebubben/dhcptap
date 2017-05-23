@@ -12,13 +12,13 @@ dhcp protocol tracer / viewer to tap / dump and filter dhcp traffic - tested on 
 program will capture packets on interface and needs raw device access so ***root privileges*** are needed
 
 
-./dhcptap enp0s25
+`./dhcptap enp0s25`
 
 Filters will be *ANDED* by default
 
-<space> - enable filters
-<r> - reset all filters
-<q> - quit
+`space` - enable filters
+`r` - reset all filters
+`q` - quit
 
 In filter mode pick a field to filter on, the filter will be matched so that
 partial matches on names and ips will work i.e
@@ -26,13 +26,13 @@ Filter 10.1.
 
 will match 10.1.12 and 10.1.14
 
-pressing <space> again will enable adding a filter on another field, the new
+pressing `space` again will enable adding a filter on another field, the new
 filter is then ANDED
 
 filtering on options will open a submenu where you can filter on all subfilters
 
 example:
-<space>
+`space`
 ```
 FIELD      OCTETS       DESCRIPTION
 -----      ------       -----------
@@ -69,7 +69,7 @@ Options     var  Optional parameters field.  See the options
                  documents for a list of defined options.
 ```
 
-"Op" <tab><tab>
+"Op" `tab``tab`
 
 ```
 Filter on what field?: Options
@@ -108,11 +108,11 @@ base-time                               start-time-of-state                     
 dhcp-state                              data-source                             Authenticate                            Msft - classless route                  
 Msft - winsock proxy auto detect        End                                     
 ```
-"Rela" <tab> <tab>
+"Rela" `tab` `tab`
 ```
 Filter on Options?: Relay agent information
 Filter on option Relay agent information?: 10.12
 ```
-<enter>
-<r> 
+`enter`
+`r` 
 resetting filters
